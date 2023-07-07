@@ -13,13 +13,6 @@
                         @csrf
                         @method('PUT')
 
-                        <div>
-                            <x-input-label for="name" value="Name" />
-                            <x-text-input id="name" name="name" value="{{ old('name', $guide->name) }}" type="text"
-                                class="block mt-1 w-full" />
-                            <x-input-error :messages="$errors->get('name')" class="mt-2" />
-                        </div>
-
                         <div class="mt-4">
                             <x-input-label for="email" value="Email" />
                             <x-text-input id="email" name="email" value="{{ old('email', $guide->email) }}" type="text"
@@ -29,7 +22,7 @@
 
                         <div class="mt-4">
                             <x-primary-button>
-                                Save
+                                Send Invitation
                             </x-primary-button>
                         </div>
                     </form>
